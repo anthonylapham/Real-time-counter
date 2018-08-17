@@ -22,7 +22,7 @@ io.sockets.on('connection', (socket) => {
 
     socket.on('decreaseNumberToServer', function(){
       number--;
-      io.emit('decreaseNumberToServer', {counter: number});
+      io.emit('decreaseNumberToClient', {counter: number});
     });
   });
 })

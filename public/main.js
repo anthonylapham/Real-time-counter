@@ -11,6 +11,7 @@ $(document).ready(function() {
   });
 
   socket.on('decreaseNumberToClient', function(newData){
+    console.log('the number is:', newData);
     $('#counter').text(newData.counter);
   })
 
