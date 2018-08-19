@@ -19,11 +19,11 @@ io.sockets.on('connection', (socket) => {
   socket.on('increaseNumberToServer', function() {
     number++;
     io.emit('increaseNumberToClient', { counter: number });
+  });
 
-    socket.on('decreaseNumberToServer', function(){
-      number--;
-      io.emit('decreaseNumberToClient', {counter: number});
-    });
+  socket.on('decreaseNumberToServer', function(){
+    number--;
+    io.emit('decreaseNumberToClient', {counter: number});
   });
 })
 
